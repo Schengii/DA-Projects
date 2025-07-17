@@ -1,0 +1,926 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+/**************************************** CSS styling für Section 1 *******************************************/
+.section-1 {
+     background-image: url("./img/1_hero/JPG/hero_bg.jpg");
+     background-size: cover;
+     background-position: bottom;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+}
+
+ .container-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;  
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.icon-flower {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    margin: 16px;
+    align-items: baseline;
+}
+
+.menu-bar {
+    display: flex;
+    font-size: 24px;
+    font-family: 'Raleway';
+    align-items: baseline;
+    font-weight: 300;
+}
+
+.menu-bar a {
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.icon-phone {
+    height: 24px;
+    width: 24px;
+}
+
+.button {
+    align-items: center;
+    background-color: #9F0908;
+    padding: 5px;
+    border: 0.5px solid;
+    border-color: white;
+    border-radius: 8px;
+    display: flex;
+    margin-left: 25px;
+}
+
+.menu-bar a:hover {
+    color: #e23a3a;
+    text-decoration: underline;
+}
+
+.header-1 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    font-family: 'Raleway';
+}
+
+.header-1, .headline {
+    display: flex;
+    font-size: 96px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-1, .text {
+    display: flex;
+    font-size: 24px;
+    font-weight: normal;
+    justify-content: center;
+    padding-bottom: 180px;
+}
+
+
+/*** Responsive Tablet ***/
+@media (max-width: 1070px) {
+    .hide-tablet {
+        display: none;
+    }
+
+    .section-1 {
+        background-size: cover;
+        background-position: bottom;
+        height: 100vh;
+        width: auto;
+    }
+}
+
+/*** Responsive Tablet ***/
+@media (max-width: 768px) {
+    .hide-tablet {
+        display: none;
+    }
+
+    .section-1 {
+        background-size: cover;
+        background-position: bottom;
+        height: 100vh;
+        width: auto;
+    }
+
+    .container-1 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .icon-flower {
+        height: 64px;
+        width: 64px;
+    }
+
+    .button {
+        font-size: 20px;
+        font-family:  'Raleway';
+        font-weight: normal;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .headline {
+        font-family: 'Raleway';
+        font-size: 72px;
+        font-weight: bold;
+    }
+
+    .text {
+        font-family: 'Raleway';
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .container-1 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .icon-flower {
+        height: 52px;
+        width: 52px;
+    }
+
+    .header-1 {
+        display: flex;;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headline {
+        font-family: 'Raleway';
+        font-size: 52px;
+        font-weight: bold;
+    }
+
+    .text {
+        font-family: 'Raleway';
+        font-size: 24px;
+        font-weight: normal;
+        padding-bottom: 24px;
+    }
+    
+}
+
+
+/*** Responsice Mobile ***/
+@media (max-width: 410px) {
+    .section-1 {
+        background-size: cover;
+        background-position: bottom;
+        height: 100vh;
+        width: 375px;
+    }
+
+    .container-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 12px;
+    }
+
+    .icon-flower {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        margin: 0;
+    }
+
+    .button {
+        display: flex;
+        font-size: 16px;
+        font-family:  'Raleway';
+        font-weight: normal;
+    }
+
+    .header-1 {
+        display: flex;;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headline {
+        font-family: 'Raleway';
+        font-size: 44px;
+        font-weight: bold;
+    }
+
+    .text {
+        font-family: 'Raleway';
+        font-size: 16px;
+        font-weight: normal;
+        padding-bottom: 15px;
+    }
+}
+
+
+/************************************** CSS styling für Section 2 ******************************************/
+.section-2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    margin-top: 120px;
+}
+
+
+.headline-2 {
+    display: flex;
+    flex-wrap: wrap;
+    color: #9F0908;
+    font-family: 'Raleway';
+    font-size: 80px;
+    margin-bottom: 64px;
+    font-weight: bold;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 128px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.text-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Economica';
+    font-weight: bold;
+    font-size: 56px;
+}
+
+
+/*** Responsive Tablet ***/
+@media (max-width: 768px) {
+    
+    .container-2 {
+        background-size: cover;
+        margin: 96px 24px 96px 24px;
+    }
+
+    .headline-2 {
+        font-family: 'Raleway';
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 48px;
+    }
+
+    .image-2 {
+        width: 112px;
+        margin-bottom: 8px;
+    }
+
+    .text-2 {
+        font-family: 'Economica';
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .headline-2 {
+        font-family: 'Raleway';
+        font-size: 52px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        margin: 80px 0 80px 0;
+    }
+    
+    .headline-2 {
+        display: flex;
+        font-family: 'Raleway';
+        font-size: 40px;
+        font-weight: bold;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .image-2 {
+        display: flex;
+        width: 112px;
+        margin-bottom: 8px;
+    }
+    
+    .text-2 {
+        display: flex;
+        font-family: 'Economica';
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 32px;
+    }
+}
+
+/*** Responsice Mobile ***/
+ @media (max-width: 375px) {
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        margin: 72px 0 72px 0;
+    }
+    
+    .headline-2 {
+        display: flex;
+        font-family: 'Raleway';
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .image-2 {
+        display: flex;
+        width: 112px;
+        margin-bottom: 8px;
+    }
+    
+    .text-2 {
+        display: flex;
+        font-family: 'Economica';
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 32px;
+    }
+}
+
+/********************************************** CSS styling für Section 3 ********************************************************/
+.section-3 {
+    display: flex;
+    background-image: url(./img/3_section_our_menu/JPG/section_our_menu_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    justify-content: center; 
+    width: auto;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1140px;
+    margin: 120px 160px 120px 160px;
+}
+
+.headline-3 {
+    display: flex;
+    padding-bottom: 64px;
+    justify-content: center;
+    color: #9F0908;
+    font-family: 'Raleway';
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.first-dish {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 56px;
+    font-weight: bold;
+    font-size: 32px;
+    width: 1100px;
+}
+
+.second-dish {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 56px;
+    width: 1100px;
+    justify-content: end;
+}
+
+.third-dish {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 80px;
+    font-weight: bold;
+    font-size: 32px;
+    width: 1100px;
+}
+
+.section-3-image {
+    display: flex;
+    width: 352px;
+    height: 352px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+ 
+.section-3-price {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.section-3-header {
+    display: flex;
+    font-family: 'Economica';
+    font-weight: bold;
+    font-size: 56px;
+    width: 480px;
+}
+
+.section-3-header-2 {
+    display: flex;
+    padding-left: 80px;;
+    font-family: 'Economica';
+    font-weight: bold;
+    font-size: 56px;
+    width: 480px;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 8px;
+}
+
+.text-ramen {
+    padding-top: 16px;
+    color: #675e54;
+    font-family: 'Raleway';
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.text-ramen-2 {
+    padding-left: 80px;
+    padding-top: 16px;
+    color: #675e54;
+    font-family: 'Raleway';
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/*** Responsive Tablet ***/
+@media (max-width: 768px) {
+    .section-3 {
+        display: flex;
+        background-image: url(./img/3_section_our_menu/JPG/section_our_menu_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        justify-content: center; 
+        width: auto;
+    }
+
+    .container-3 {
+        display: flex;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 96px;
+        width: 720px;
+    }
+
+    .headline-3 {
+        display: flex;
+        font-family: 'Raleway';
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 48px;
+        padding: 0;
+    }
+
+    .section-3-image {
+        display: flex;
+        width: 352px;
+        height: 352px;
+    }
+
+    .section-3-header {
+        display: flex;
+        font-family: 'Econmoica';
+        font-size: 32px;
+        font-weight: bold;
+        width: 352px;
+    }
+
+    .text-ramen {
+        display: table;
+        font-family: 'Raleway';
+        font-size: 24px;
+        font-weight: bold;
+        width: 352px;
+        justify-content: space-between;
+    }
+
+    .section-3-price {
+        display: flex;
+        width: auto;
+    }
+
+    .first-dish {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 32px;
+        width: 720px;
+    }
+
+    .second-dish {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 32px;
+        width: 720px;
+    }
+
+    .third-dish {
+        display: flex;
+        gap: 24px;
+        width: 720px;
+    }
+}
+
+/*** Responsice Mobile ***/
+ @media (max-width: 375px) {
+    .section-3 {
+        display: flex;
+        justify-content: center; 
+        width: auto;
+    }
+
+    .container-3 {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 72px;
+    }
+
+    .headline-3 {
+        font-size: 40px;
+        font-family: 'Raleway';
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .text-ramen {
+        display: table;
+        font-family: 'Raleway';
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .section-3-header {
+        display: flex;
+        padding-left: 8px;
+        font-family: 'Economica';
+        font-weight: bold;
+        font-size: 32px;
+        margin-top: 24px;
+    }
+
+    .section-3-image {
+        display: flex;
+        width: 352px;
+        height: 352px;
+    }
+
+    .first-dish {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-dish {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .third-dish {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+/******************** Section 4 ***********************/
+.section-4 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container-4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%
+}
+
+.headline-4 {
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 8px;
+    justify-content: center;
+    color: #9F0908;
+    font-family: 'Raleway';
+    font-size: 80px;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.adress {
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+    font-family: 'Raleway';
+}
+
+.map-marker {
+    height: 24px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+
+/*** Responsive Tablet ***/
+@media (max-width: 768px) {
+    .headline-4 {
+        margin-top: 72px;
+        margin-bottom: 8px;
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .adress {
+        font-family: 'Raleway';
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .map {
+        display: flex;
+        width: auto;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/*** Responsice Mobile ***/
+@media (max-width: 375px) {
+    .headline-4 {
+        margin-top: 72px;
+        margin-bottom: 8px;
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .adress {
+        font-family: 'Raleway';
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .map {
+        display: flex;
+        width: auto;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .headline-4 {
+        margin-top: 56px;
+        margin-bottom: 8px;
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    .adress {
+        font-family: 'Raleway';
+        font-weight: normal;
+        font-size: 8px;
+        margin-bottom: 32px;
+    }
+
+    .map {
+        display: flex;
+        width: auto;
+    }
+}
+
+
+/****************************** Section 5 ***********************/
+.section-5 {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-color: #0A141E;
+}
+
+.container-5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 144px;
+    width: 100%;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.logo-footer-left {
+    display: flex;
+    float: left;
+}
+
+
+.logo-footer-right {
+    display: flex;
+    float: right;
+}
+
+
+.logo-footer-1 {
+    display: flex;
+    height: 40px;
+}
+
+.logo-footer-2 {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    margin-left: 16px;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+
+/*** Responsive Tablet ***/
+@media (max-width: 768px) {
+    .container-5 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 24px;
+        margin-right: 24px;
+        height: 144px;
+        width: 768px;
+    }
+
+    .logo-footer-left {
+        display: flex;
+        float: left;
+    }
+    
+    .logo-footer-right {
+        display: flex;
+        float: right;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-5 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 375px;
+        height: 86px;
+    }
+
+    .logo-footer-1 {
+        display: none;        
+    }
+
+    .logo-footer-2 {
+        display: flex;
+        flex-direction: column;
+        height: 32px;
+        width: 32px;
+        margin-left: 8px;
+    }
+
+    .logo-footer-3 {
+        display: flex;
+        height: 40px;
+        width: 40px; 
+    }
+}
+
+
+/*** Responsice Mobile ***/
+@media (max-width: 375px) {
+    .container-5 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 375px;
+        height: 86px;
+    }
+
+    .logo-footer-1 {
+        display: none;        
+    }
+    
+    .logo-footer-2 {
+        display: flex;
+        flex-direction: column;
+        height: 32px;
+        width: 32px;
+        margin-left: 8px;
+    }
+
+    .logo-footer-3 {
+        display: flex;
+        height: 40px;
+        width: 40px; 
+    }
+}
