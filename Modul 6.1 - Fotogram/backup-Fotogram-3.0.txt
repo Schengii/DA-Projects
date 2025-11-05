@@ -1,0 +1,190 @@
+Fotogramm Backup 3.0 14.01.25
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./icon/favicon_fotogram.png">
+    <link rel="stylesheet" href="fotogram.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<header class="headline">
+    <img src="./icon/logo_fotogram (1).svg">
+</header>
+
+
+<!-- Normale Ansicht -->
+<div class="main">
+  <div class="flex-container">
+    <img src="./img/canyon-9215914_1920.jpg" class="img">
+    <img src="./img/cascade-7152189_1280.jpg" class="img">
+    <img src="./img/deer-8052359_1920.jpg" class="img">
+    <img src="./img/elephant-8359382_1920.jpg" class="img">
+    <img src="./img/forest-3369950_1280.jpg" class="img">
+    <img src="./img/fox-715588_1920.jpg" class="img">
+    <img src="./img/mountain-9172053_1280.jpg" class="img">
+    <img src="./img/nature-8622415_1280.jpg" class="img">
+    <img src="./img/pile-1651945_1920.jpg" class="img">
+    <img src="./img/raccoons-8282171_1920.jpg" class="img">
+  </div>
+</div>
+
+
+<!-- Dialog Fenster-->
+<button onclick=showImgDialog()>Test</button>
+<dialog id="login-dialog">
+  <div class="wrapper">
+    <h2>Modal Images</h2>
+    <form>
+      <img src="./img/canyon-9215914_1920.jpg" class="imgModal" alt="modalImage1">
+      <button onclick=closeImgDialog() type="button">Close</button>
+    </form>
+  </div>
+</dialog>
+
+
+<!-- Footer -->
+<footer>
+    <img class="logo-footer" src="./img/developerakademielogo.png">
+    <p>@ 2025 Max Schenk @ Developer Akademie GmbH</p>
+</footer>
+
+
+<!-- JS-Datei -->
+<script src="fotogram-script.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!---
+<div class="flex-container">
+      
+      <div><img src="./img/cascade-7152189_1280.jpg" class="img-modal"></div>
+      <div><img src="./img/deer-8052359_1920.jpg" class="img-modal"></div>
+      <div><img src="./img/elephant-8359382_1920.jpg" class="img-modal"></div>
+      <div><img src="./img/forest-3369950_1280.jpg" class="img-modal"></div>
+      <div><img src="./img/fox-715588_1920.jpg" class="img-modal"></div>
+      <div><img src="./img/mountain-9172053_1280.jpg" class="img-modal"></div>
+      <div><img src="./img/nature-8622415_1280.jpg" class="img-modal"></div>
+      <div><img src="./img/pile-1651945_1920.jpg" class="img-modal"></div>
+      <div><img src="./img/raccoons-8282171_1920.jpg" class="img-modal"></div>
+  </div>
+-->
+
+
+CSS Datei 
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #082029;
+}
+
+header img {
+  height: 80px;
+  padding: 20px 20px;
+}
+
+body, .show, .main {
+  width: auto;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.img {
+  height: 150px;
+  width: 200px;
+  margin: 16px;
+}
+
+.img:hover {
+  box-shadow: 3px 3px;
+  cursor: pointer;
+  border: 3px solid black;
+  transform: scale(1.1);
+}
+
+
+/* Modales Bild */
+.imgModal {
+  height: 350px;
+  width: 250px;
+}
+
+dialog {
+  padding: 50px;
+}
+
+
+dialog .wrapper {
+  padding: 16px;
+}
+
+
+/* Hintergrund modale dialog gestalten */
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.8;
+}
+
+
+
+footer {
+  background-color: #082029;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: flex;
+  object-fit: contain;
+  margin: 8px;
+  height: 40px;
+}
+
+p {
+  color: gray;
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: "Raleway";
+  font-size: 12px;
+}
+
+
+
+
+JS Datei 
+const dialog = document.getElementById("login-dialog")
+const wrapper = document.querySelector(".wrapper")
+
+/* Verkürzter code
+const showImgDialog = (show) => show ? dialog.showModal() : dialog.close()
+dialog.addEventListener('click', (e) => !wrapper.contains(e.target) && dialog.close)
+*/
+
+function showImgDialog(){
+dialog.showModal()
+}
+function closeImgDialog(){
+dialog.close()
+}
+dialog.addEventListener('click', (e) => {
+  if(!wrapper.contains(e.target)){
+  dialog.close()
+  }
+})
+

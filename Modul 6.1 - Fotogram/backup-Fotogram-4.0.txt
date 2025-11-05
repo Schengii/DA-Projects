@@ -1,0 +1,294 @@
+Backup Fotogramm-4.0
+14.01.25
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./icon/favicon_fotogram.png">
+    <link rel="stylesheet" href="fotogram.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<header class="headline">
+    <img src="./icon/logo_fotogram (1).svg">
+</header>
+
+
+<!-- Normale Ansicht -->
+<div class="main">
+  <div class="flex-container">
+    <img src="./img/canyon-9215914_1920.jpg" onclick="openDialog('imgDialog')" class="img">
+    <img src="./img/cascade-7152189_1280.jpg" onclick="openDialog('imgDialog')" class="img">
+    <img src="./img/deer-8052359_1920.jpg" onclick="openModal();currentSlide(3)" class="img">
+    <img src="./img/elephant-8359382_1920.jpg" onclick="openModal();currentSlide(4)" class="img">
+    <img src="./img/forest-3369950_1280.jpg" onclick="openModal();currentSlide(5)" class="img">
+    <img src="./img/fox-715588_1920.jpg" onclick="openModal();currentSlide(6)" class="img">
+    <img src="./img/mountain-9172053_1280.jpg" onclick="openModal();currentSlide(7)" class="img">
+    <img src="./img/nature-8622415_1280.jpg" onclick="openModal();currentSlide(8)" class="img">
+    <img src="./img/pile-1651945_1920.jpg" onclick="openModal();currentSlide(9)" class="img">
+    <img src="./img/raccoons-8282171_1920.jpg" onclick="openModal();currentSlide(10)" class="img">
+  </div>
+</div>
+
+
+
+<!-- Overlay mit Dialog -->
+<div id="body-overlay"></div>
+<div class="dialog" id="imgDialog">
+   
+   <img src="./img/canyon-9215914_1920.jpg" class="imgDialogOverlay">
+   <a href="#" role="button" class="dialogSchliessenBtn" onclick="closeDialog('imgDialog')">X</a>
+   <div class="navButtons">
+    <button class="prevButton">< Prev</button>
+    <button class="nextButton">Next ></button>
+   </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <img class="logo-footer" src="./img/developerakademielogo.png">
+  <p>@ 2025 Max Schenk @ Developer Akademie GmbH</p>
+</footer>
+
+<!-- JS-Datei -->
+<script src="fotogram-script.js"></script>
+
+</body>
+</html>
+
+
+
+
+CSS Datei
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #082029;
+}
+
+header img {
+  height: 80px;
+  padding: 20px 20px;
+}
+
+body, .show, .main {
+  width: auto;
+  height: 85vh;
+}
+
+.img {
+  height: 150px;
+  width: 200px;
+  margin: 16px;
+}
+
+.img:hover {
+  box-shadow: 3px 3px;
+  cursor: pointer;
+  border: 3px solid black;
+  transform: scale(1.1);
+}
+/*******************************************/
+
+
+
+
+
+
+
+/* Hintergrund modale dialog gestalten */
+#body-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out;
+}
+
+.dialog {
+  position: fixed;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #076181;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out;
+}
+
+#body-overlay.sichtbar, .dialog.sichtbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#imgDialog {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 45%;
+}
+
+
+.imgDialogOverlay {
+  display: flex;
+  height: 300px;
+  width: auto;
+}
+
+
+/* Styling Buttons */
+.navButtons {
+  display: flex;
+  padding: 16px;
+  justify-content: space-around;
+}
+
+.nextButton, .prevButton {
+  border: 2px solid black;
+  background-color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Dialog Button */
+.dialogSchliessenBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.dialogSchliessenBtn:hover {
+  color: black;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+/*******************************************************/
+/* Footer */
+footer {
+  background-color: #082029;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: flex;
+  object-fit: contain;
+  margin: 8px;
+  height: 40px;
+}
+
+p {
+  color: gray;
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: "Raleway";
+  font-size: 12px;
+}
+
+
+
+JS Datei
+
+function openDialog(dialogId) {
+  document.getElementById(dialogId).classList.add("sichtbar");
+  document.getElementById("body-overlay").classList.add("sichtbar");
+} 
+
+function closeDialog(dialogId) {
+  document.getElementById(dialogId).classList.remove("sichtbar");
+  document.getElementById("body-overlay").classList.remove("sichtbar");
+}
+
+
+
+
+
+/*
+const dialog = document.getElementById("login-dialog")
+const wrapper = document.querySelector(".wrapper")
+
+ Verkürzter code
+const showImgDialog = (show) => show ? dialog.showModal() : dialog.close()
+dialog.addEventListener('click', (e) => !wrapper.contains(e.target) && dialog.close)
+
+
+function showImgDialog(){
+dialog.showModal()
+}
+function closeImgDialog(){
+dialog.close()
+}
+dialog.addEventListener('click', (e) => {
+  if(!wrapper.contains(e.target)){
+  dialog.close()
+  }
+})
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+*/

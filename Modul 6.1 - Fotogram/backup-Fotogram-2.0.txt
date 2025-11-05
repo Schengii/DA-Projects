@@ -1,0 +1,159 @@
+Backup Fotogramm 2.0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./icon/favicon_fotogram.png">
+</head>
+<body>
+
+    <div class="headline">
+        <h1>Fotogram</h1>
+        <p>Dies ist meine Bildergallerie. Viel Spaß beim anschauen :-)</p>
+    </div>
+    
+    <section class="gallery">
+        <figure tabindex="1"> <img id="myImg" src="./img/canyon-9215914_1920.jpg" alt="canyon">
+            <figcaption>Canyon</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/cascade-7152189_1280.jpg" alt="cascade">
+            <figcaption>Cascade</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/deer-8052359_1920.jpg" alt="deer">
+            <figcaption>Deer</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/elephant-8359382_1920.jpg" alt="elephant">
+            <figcaption>Elephant</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/forest-3369950_1280.jpg" alt="forest">
+            <figcaption>Forest</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/fox-715588_1920.jpg" alt="fox">
+            <figcaption>fox</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/mountain-9172053_1280.jpg" alt="Mountain">
+            <figcaption>Mountain</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/mountain-range-8508224_1280.jpg" alt="Mountain-range">
+            <figcaption>Mountain-range</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/nature-8622415_1280.jpg" alt="Nature">
+            <figcaption>Nature</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/pile-1651945_1920.jpg" alt="Pile">
+            <figcaption>Pile</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/raccoons-8282171_1920.jpg" alt="Raccoons">
+            <figcaption>Reccons</figcaption>
+        </figure>
+        <figure tabindex="1"> <img src="./img/simba-8618301_1920.jpg" alt="Simba">
+            <figcaption>Simba</figcaption>
+        </figure>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+
+
+    
+  <script src="script.js"></script>  
+</body>
+</html>
+
+
+CSS Datei 
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.headline {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 16px;
+    padding: 16px;
+}
+
+
+body {
+    background-color: lightskyblue;
+	margin: 0;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+}
+
+
+.gallery {
+	--size: 16em;
+	/* control the size */
+	
+	--gap: 1.5em;
+	/* control the gap */
+	
+	--zoom: 1.5;
+	/* control the scale factor */
+	
+	display: grid;
+	gap: var(--gap);
+	width: calc(5*var(--size) + 3*var(--gap));
+	aspect-ratio: 1.5;
+	grid-template-columns: repeat(4, auto);
+}
+
+.gallery figure {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.gallery figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	opacity: 0;
+	color: white;
+	background: rgb(0 0 0 / 0.3);
+}
+
+.gallery figure:hover figcaption,
+.gallery figure:focus figcaption {
+	opacity: 1;
+}
+
+.gallery > figure img {
+	width: 0;
+	height: 0;
+	min-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	filter: grayscale(75%);
+	transition: .35s linear;
+    border-radius: 32px;
+}
+
+.gallery figure:hover img,
+.gallery figure:focus img {
+	filter: grayscale(0);
+	width: calc(var(--size)*var(--zoom));
+	height: calc(var(--size)*var(--zoom));
+}
+
+
+JS Datei 

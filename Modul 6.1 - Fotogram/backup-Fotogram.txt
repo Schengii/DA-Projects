@@ -1,0 +1,359 @@
+Backup Fotogram 1.0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./icon/favicon_fotogram.png">
+    <link rel="stylesheet" href="fotogram.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<header class="headline">
+    <img src="./icon/logo_fotogram (1).svg">
+</header>
+
+
+<!-- Main Section -->
+<div class="main">
+
+    <div class="row">
+        <div class="column">
+          <img src="./img/canyon-9215914_1920.jpg" onclick="openModal();currentSlide(1)" class="img">
+        </div>
+        <div class="column">
+          <img src="./img/cascade-7152189_1280.jpg" onclick="openModal();currentSlide(2)" class="img">
+        </div>
+        <div class="column">
+          <img src="./img/deer-8052359_1920.jpg" onclick="openModal();currentSlide(3)" class="img">
+        </div>
+        <div class="column">
+          <img src="./img/elephant-8359382_1920.jpg" onclick="openModal();currentSlide(4)" class="img">
+        </div>
+        <div class="column">
+            <img src="./img/forest-3369950_1280.jpg" onclick="openModal();currentSlide(5)" class="img">
+          </div>
+          <div class="column">
+            <img src="./img/fox-715588_1920.jpg" onclick="openModal();currentSlide(6)" class="img">
+          </div>
+          <div class="column">
+            <img src="./img/mountain-9172053_1280.jpg" onclick="openModal();currentSlide(7)" class="img">
+          </div>
+          <div class="column">
+            <img src="./img/nature-8622415_1280.jpg" onclick="openModal();currentSlide(8)" class="img">
+          </div>
+          <div class="column">
+            <img src="./img/pile-1651945_1920.jpg" onclick="openModal();currentSlide(9)" class="img">
+          </div>
+          <div class="column">
+            <img src="./img/raccoons-8282171_1920.jpg" onclick="openModal();currentSlide(10)" class="img">
+          </div>
+      </div>
+      
+     
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 10</div>
+            <img src="./img/canyon-9215914_1920.jpg" class="img-modal">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 10</div>
+            <img src="./img/cascade-7152189_1280.jpg" class="img-modal">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 10</div>
+            <img src="./img/deer-8052359_1920.jpg" class="img-modal">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 10</div>
+            <img src="./img/elephant-8359382_1920.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 10</div>
+            <img src="./img/forest-3369950_1280.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 10</div>
+            <img src="./img/fox-715588_1920.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">7 / 10</div>
+            <img src="./img/mountain-9172053_1280.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">8 / 10</div>
+            <img src="./img/nature-8622415_1280.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">9 / 10</div>
+            <img src="./img/pile-1651945_1920.jpg" class="img-modal">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">10 / 10</div>
+            <img src="./img/raccoons-8282171_1920.jpg" class="img-modal">
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <img class="logo-footer" src="./img/developerakademielogo.png">
+    <p>@ 2025 Max Schenk @Developer Akademie GmbH</p>
+</footer>
+
+
+<!-- JS-Datei -->
+<script src="fotogram-script.js"></script>
+</body>
+</html>
+
+
+
+
+CSS
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #082029;;
+}
+
+header img {
+  height: 80px;
+  padding: 20px 20px;
+}
+
+body, .main {
+  width: auto;
+  height: 90vh;
+}
+
+.img {
+  height: 150px;
+  width: 200px;
+  margin: 16px;
+}
+
+.img:hover {
+  box-shadow: inset;
+  cursor: pointer;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+/* The Modal (background) */
+.modal {
+  border: 1px solid black;
+  background-color: lightblue;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 1000px;
+  height: 500px;
+  overflow: auto;
+  
+}
+
+/* Modal Content */
+.modal-content {
+  border: 1px solid black;
+  background-color: yellow;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  max-width: 500px;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+footer {
+  background-color: #082029;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: flex;
+  object-fit: contain;
+  margin: 8px;
+  height: 40px;
+}
+
+p {
+  color: gray;
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: "Raleway";
+  font-size: 12px;
+}
+
+
+JS-Datei
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
