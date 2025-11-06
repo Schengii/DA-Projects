@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+
+    <script>
+        function logUp(){console.log("logUp");}
+        function logDown(){console.log("logDown");}
+
+        function logDownWBubblingProtection(event) {
+            console.log("logDown");
+            event.stopPropagation();
+        }
+    </script>
+</head>
+<body onclick="console.log('bodyclick')">
+    <div onclick="logUp()" class="outer">
+        <div onclick="logDownWBubblingProtection(event)" class="inner">
+
+        </div>
+    </div>
+
+    
+    <div onclick="logUp()" class="outer">
+        <div onclick="logDown()" class="inner">
+            
+        </div>
+    </div>
+    
+    
+</body>
+</html>

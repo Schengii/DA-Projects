@@ -1,0 +1,14 @@
+/*****
+Developer Akademie Front-end 13.12.2024
+*****/
+
+09 - Aufgabe: onkeyup/onkeydown
+
+01 Aufgabe:
+Erstelle ein inputfeld mit einer selbst gewählten id.
+
+02 Aufgabe:
+Erstelle eine Funktion, die den Value des inputfeldes aus loggt.
+
+03 Probiere aus:
+Vergleiche nun den log von onkeydown und onkeyup. Siehst du einen Unterschied?
