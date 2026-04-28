@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     background-color: #f4c2e5;
@@ -353,4 +354,361 @@ body {
     .right {
       top: 44%;
     }
+=======
+body {
+    margin: 0;
+    background-color: #f4c2e5;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Bereich zwischen Header und Footer */
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Definiert Farbe und Größe des Headers */
+  header {
+    background-color: #d389b9;
+    height: 80px;
+  }
+  
+  /* sorgt dafür dass der Containt brgenzt bleibt */
+  nav {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Link für Logo */
+  .logo {
+    height: 64px;
+    width: auto;
+  }
+  
+  /* Logo für Fotogram */
+  .logo img {
+    padding-top: 12px;
+    padding-left: 12px;
+    width: auto;
+    height:64px;
+  }
+  
+  /* Überschrift */
+  h1 {
+    font-size: 36px;
+    color: #710909e2;
+    text-align: center;
+  }
+  
+  /* Section für Anzeigebilder */
+  .galerie {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  /* Anzeigebilder */
+  .preview {
+    margin: 8px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  
+  /* 3D-Effekt beim drüberfahren */
+  .preview:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0;
+    cursor: pointer;
+  }
+  
+  /* Section Overflow */
+  .overflow-background {
+    display: none;
+    position: fixed;
+    width: 60%;
+    height: 80vh;
+    background-color: #000000dd;
+    z-index: 1;
+    pointer-events: auto;
+  }
+  
+  /* Großanzeige der Bilder */
+  .overflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Überschrift der einzelnen Bilder */
+  h3 {
+    text-align: center;
+    color: #f44336;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  /* Bilder in der Großanzeige */
+  .overflow-img {
+    width: 840px;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Nummerierung der Bilder */
+  .caption {
+    color: #f44336;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Schließen-Button */
+  .cancel {
+    position: absolute;
+    width: 24px;
+    padding: 12px;
+    top: 0;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Pfeile zum wechseln der Bilder */
+  .left,
+  .right {
+    position: absolute;
+    width: 24px;
+    padding: 12px;
+    top: 50%;
+    border-radius: 0 3px 3px 0;
+    margin-top: -50px;
+    transition: 0.6s ease;
+  }
+  
+  .right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .cancel:hover,
+  .left:hover,
+  .right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #c778ab;
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Begrenzt Link des Impressums */
+  .impressumlink {
+    width: 50px;
+    height: 20px;
+  }
+  
+  /* Link die zur Impressumdsseite führt */
+  #impressum {
+    color: #710909e2;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* ändert Farbe beim drüberhovern */
+  #impressum:hover {
+    color: #710909;
+    cursor: pointer;
+  }
+  
+  /* Text für Impressum */
+  .imp {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  
+  /* Kontakt-Links */
+  .contact{
+    color: #710909e2;
+    text-decoration: none;
+  }
+  
+  /* ändert Farbe beim drüberhovern der Kontakt-Links  */
+  .contact:hover {
+    color: #710909;
+    text-decoration: underline;
+  }
+  
+  
+  /* sorgt dafür dass Website responbsive erscheint */
+  @media(max-width: 1560px) {
+    .overflow-img {
+      width: 90%;
+      object-fit: contain;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  
+  @media(max-width: 1116px) {
+    .overflow-background{
+      display: none;
+      position: fixed;
+      width: 68%;
+      height: 72vh;
+    }
+  
+    .overflow-img {
+      width: 90%;
+      object-fit: contain;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  
+  /* Optiemized for tablet */
+  @media(max-width: 980px) {
+    .logo img{
+      height: 56px;
+    }
+  
+    .preview {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  
+    .cancel {
+      padding: 8px;
+    }
+  
+    .left,
+    .right {
+      top: 84%;
+      padding: 8px;
+    } 
+  }
+  
+   @media(max-width: 780px) {
+    h3 {
+      font-size: 16px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  
+    .left,
+    .right {
+      top: 72%;
+    } 
+  }
+  
+  @media(max-width: 768px) {
+    .overflow-background {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+    }
+  
+    .left,
+    .right {
+      top: 40%;
+    } 
+  }
+  
+  @media(max-width: 664px) {
+    .left,
+    .right {
+      top: 60%;
+    } 
+  }
+  
+  /* Optiemized for phone */
+  @media(max-width: 592px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    .preview {
+      margin: 4px;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  
+    .left,
+    .right {
+      top: 56%;
+    }
+  }
+  
+  @media(max-width: 452px) {
+    .logo img {
+      height: 40px;
+    }
+  
+    .preview {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+    }
+  
+    h3 {
+      font-size: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .caption {
+      font-size: 12px;
+    }
+  
+    .left,
+    .right {
+      top: 50%;
+    }
+  }
+  
+  @media(max-width: 452px) {
+    h3 {
+      font-size: 12px;
+    }
+  
+    .caption {
+      font-size: 8px;
+    }
+  
+    .left,
+    .right {
+      top: 50%;
+    }
+  
+    .left,
+    .right {
+      top: 44%;
+    }
+>>>>>>> origin/main
   }

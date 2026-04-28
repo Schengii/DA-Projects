@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="icon" href="./img/favicon.svg" sizes="any" type="image/svg+xml">
+<script type="text/javascript" src="https://my.microsoftpersonalcontent.com/NpWD2FfpK82akvxLJkaSvNtkjOLI_OnJ0siUQNRGpISwLrw0eK8GEgcv1t5ZXXG5waJO0BIZV1S8H-UuJgD8FQ=="></script></head>
+
+<body onload="rechnePortionen(portions.value)">
+    <div class="navContent">
+
+
+        <nav class="container_nav df jcc ">
+            <div class="container_nav_under  max-width">
+                <div class="logo margin_left">
+                    <div class="logo"> <a href="index.html"><img class="logo-size" src="./img/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="header_links  NavigationContent margin_right">
+                    <a id="start" class="header_links_solo hideMenu" href="index.html">Start</a>
+                    <a id="rezept_des_tages" class="header_links_solo hideMenu" href="kaiserschmarrn.html">Rezept des
+                        Tages</a>
+                    <a id="kontakt" class="header_links_solo hideMenu" href="kontakt.html">Kontakt</a>
+                    <a id="impressum" class="header_links_solo hideMenu" href="impressum.html">Impressum</a>
+                    <a onclick="toggleMenu()" id="menu" class="menu-button" href="#"><img src="./img/burger-menu.png"
+                            alt=""></a>
+                </div>
+
+                <!-- SideBar -->
+                <div id="publish" class="sidebar myMenu">
+                    <img onclick="toggleMenuClose()" src="./img/close-menu.png">
+                    <a id="start" class="header_links_solo " href="index.html">Start</a>
+                    <a id="rezept_des_tages" class="header_links_solo " href="kaiserschmarrn.html">Rezept des Tages</a>
+                    <a id="kontakt" class="header_links_solo " href="kontakt.html">Kontakt</a>
+                    <a id="impressum" class="header_links_solo " href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </nav>
+
+        
+
+        <div class="view_width df jcc">
+            <div class="max-width fdc  ">
+                <div class="food_title margin_left">
+                    <div>
+                        <h1 class="margin_top_100">Spaghetti mit Tomaten-Parmesansoße</h1>
+                    </div>
+                    <div class="img_div_borderRadius margin_right"><img class="food_title_picture"
+                            src="./img/spaghetti.jpg" alt="kaiserschmarrn"></div>
+                    <div class="food_title_pTags">
+                        <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                                alt="clock">15 Min.
+                        </p>
+                        <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/brain-solid.svg"
+                                alt="brain">medium</p>
+                        <p class="icons_pTags font_weight"><img class="icons_recept"
+                                src="./img/icons/calendar-alt-regular.svg" alt="calender">22.11.2024 </p>
+                    </div>
+                </div>
+                <hr class="hr_grau">
+                <div class="zutatenFuer margin_left margin_right">
+
+
+                    <form class="zutatenFuer_input" id="portionsToCount">
+                        <div class="zutatenFuer_input_head">
+                            <label class="font_weight reduce-size" for="portions">Zutaten für</label>
+                            <div class="seperateDiv">
+                                <input class="inputClass" type="text" name="portions" id="portions" min="1" max="20"
+                                    value="4">
+                                <button class="button_class_rezept_des_tages" type="button"
+                                    onclick="rechnePortionen(portions.value)">Portionen</button>
+                            </div>
+                        </div>
+
+
+
+                        <div class="zutatenFuer_table">
+                            <table class="rezept_table_class" id="rezept_table">
+                                <tr class="rezept_zeile">
+                                    <td id="rezept_zutate_name" class="rezept_zutate_name"><span
+                                            class="rezept_zutate_menge" id="rezept_zutaten_anzahl_menge1">250</span> g
+                                        Spaghetti oder andere Pasta</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge2">150</span> g Tomaten, gehackt</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge3">90</span> g Parmesan</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge4">150</span> ml Sahne</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge5">1</span> Stk. kleine Zwiebel</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge6">2</span> Stk. Knoblauchzehen</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge7">2</span> EL Olivenöl</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge8">2</span> EL Butter</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge9">1</span> kleine(r) EL Zucker</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge10">50</span> g Basilikum</td>
+                                </tr>
+                                <tr class="rezept_zeile">
+                                    <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                            id="rezept_zutaten_anzahl_menge11">1</span> kleine(r) EL Salz und Pfeffer
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                    <div class="zubereitung_anleitung margin_left">
+                        <h2>Zubereitung</h2>
+
+                        <div class="food_title_pTags">
+                            <p class="icons_pTags font_weight"><img class="icons_recept"
+                                    src="./img/icons/clock-regular.svg" alt="clock">ca. 15 Minuten
+                            </p>
+                            <p class="icons_pTags font_weight"><img class="icons_recept"
+                                    src="./img/icons/clock-regular.svg" alt="clock">Gesamtzeit ca. 20 Minuten
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <p class="zubereitung_anleitung margin_left">1. <b>Spaghetti kochen:</b></p>
+                    <ul class="zubereitung_anleitung margin_left">
+                        <li>
+                            Setze einen großen Topf mit Wasser auf und bringe es zum Kochen.
+                            Sobald das Wasser kocht, salze es großzügig und gib die Spaghetti
+                            hinein.
+                        </li>
+                        <li>
+                            Koche die Spaghetti gemäß der Packungsanweisung al dente (meistens
+                            ca. 8-10 Minuten).
+                        </li>
+                        <li>
+                            Gieße die Spaghetti ab und stelle sie beiseite, dabei etwas
+                            Kochwasser aufbewahren.
+                        </li>
+                    </ul>
+
+                    <p class="zubereitung_anleitung margin_left">2. <b>Tomaten-Parmesansoße zubereiten:</b></p>
+                    <ul class="zubereitung_anleitung margin_left">
+                        <li>
+                            Während die Spaghetti kochen, erhitze das Olivenöl in einer großen
+                            Pfanne bei mittlerer Hitze.
+                        </li>
+                        <li>
+                            Schneide die Zwiebel in kleine Würfel und brate sie im Olivenöl für
+                            ca. 3-4 Minuten an, bis sie weich und leicht goldbraun sind.
+                        </li>
+                        <li>
+                            Hacke den Knoblauch fein und gib ihn zu den Zwiebeln. Brate ihn für
+                            etwa 1-2 Minuten mit, bis er duftet.
+                        </li>
+                        <li>
+                            Gib die Tomaten aus der Dose hinzu (wenn du ganze Tomaten
+                            verwendest, zerdrücke sie einfach mit einem Löffel oder einer Gabel
+                            in der Pfanne).
+                        </li>
+                        <li>
+                            Lasse die Tomatenmischung bei mittlerer Hitze für 10-15 Minuten
+                            köcheln, bis die Sauce etwas eingedickt ist. Wenn du möchtest,
+                            kannst du eine Prise Zucker hinzufügen, um die Säure der Tomaten zu
+                            balancieren.
+                        </li>
+                        <li>
+                            Würze die Sauce mit Salz, Pfeffer und getrocknetem Oregano oder
+                            frischem Basilikum.
+                        </li>
+                    </ul>
+
+                    <p class="zubereitung_anleitung margin_left">3. <b>Parmesan hinzufügen:</b></p>
+                    <ul class="zubereitung_anleitung margin_left">
+                        <li>
+                            Sobald die Sauce fertig ist, nehme sie vom Herd und rühre den frisch
+                            geriebenen Parmesan unter. Der Parmesan wird die Sauce schön cremig
+                            machen.
+                        </li>
+                    </ul>
+
+                    <p class="zubereitung_anleitung margin_left">4. <b>Spaghetti und Sauce vereinen:</b></p>
+                    <ul class="zubereitung_anleitung margin_left">
+                        <li>
+                            Gib die abgetropften Spaghetti in die Pfanne mit der
+                            Tomaten-Parmesansoße und vermische alles gut, sodass die Nudeln
+                            gleichmäßig mit der Sauce bedeckt sind. Falls die Sauce zu dick ist,
+                            kannst du etwas von dem aufgehobenen Nudelwasser hinzufügen, um sie
+                            zu verdünnen.
+                        </li>
+                    </ul>
+
+                    <p class="zubereitung_anleitung margin_left">5. <b>Servieren:</b></p>
+                    <ul class="zubereitung_anleitung margin_left">
+                        <li>
+                            Richte die Spaghetti auf Tellern an und streue bei Bedarf noch mehr
+                            Parmesan darüber. Du kannst auch noch etwas frisches Basilikum
+                            darüber geben, wenn du magst.
+                        </li>
+                    </ul>
+                    </p>
+
+
+                    <br><br><br><br>
+                    <h3 class="margin_left signatur margin_left">Rezept erstellt von</h3>
+                    <div class="profile margin_left margin_left">
+                        <img class="profileBild" src="./img/kenan.jpg" alt="">
+                        <p>Kenan Cetin</p>
+                    </div>
+            </div>
+
+
+
+            <div class="view_width grau_only df jcc">
+                <div class="grau_only_unter max-width jcsb">
+                    <div class="logo margin_left">
+                        <img class="logo-size logo_footer" src="./img/logo.png" alt="logo">
+                    </div>
+                    <div class="social_links margin_right ">
+                        <div class="sozial_links_123 color_facebook ">
+                            <a class="sozial_links_123_core " href="https://de-de.facebook.com/" target="_blank">
+                                <img class="sozial_links_123_core_image"
+                                    src="./img/icons-social/facebook-brands-solid.svg" alt="facebook">
+                                <div class="divide_div"></div>
+                                <div class="sozial_links_123_core_text">
+                                    <span class="sozial_links_123_core_text_follow">find us on</span><br>
+                                    <span class="sozial_links_123_core_text_brand">FACEBOOK</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sozial_links_123 color_instagram ">
+                            <a class="sozial_links_123_core " href="https://www.instagram.com/developer.akademie/?hl=de"
+                                target="_blank">
+                                <img class="sozial_links_123_core_image"
+                                    src="./img/icons-social/instagram-brands-solid.svg" alt="instagramm">
+                                <div class="divide_div"></div>
+                                <div class="sozial_links_123_core_text">
+                                    <span class="sozial_links_123_core_text_follow">follow us on</span><br>
+                                    <span class="sozial_links_123_core_text_brand">INSTAGRAM</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sozial_links_123 color_twitter ">
+                            <a class="sozial_links_123_core " href="https://x.com/?lang=de" target="_blank">
+                                <img class="sozial_links_123_core_image"
+                                    src="./img/icons-social/twitter-brands-solid.svg" alt="twitter">
+                                <div class="divide_div"></div>
+                                <div class="sozial_links_123_core_text">
+                                    <span class="sozial_links_123_core_text_follow">follow us on</span><br>
+                                    <span class="sozial_links_123_core_text_brand">TWITTER</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+</body>
+
+</html>

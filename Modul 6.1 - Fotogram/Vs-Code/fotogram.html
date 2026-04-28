@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram - Dein persönliches Fotoalbum</title>
+    <link rel="icon" type="image/x-icon" href="./icon/favicon_fotogram.png" />
+    <link rel="stylesheet" href="fotogram.css" />
+  </head>
+  <body onload="init()">
+    <header class="header">
+      <img src="./icon/logo_fotogram.svg" alt="Fotogram Logo" />
+    </header>
+
+    <main class="main-content">
+      <section class="headline">
+        <h1>Your personal photo album</h1>
+      </section>
+
+      <div id="gallery-container" class="gallery-grid"></div>
+    </main>
+
+    <div id="body-overlay" class="modal-overlay">
+      <dialog class="dialog" id="main-dialog">
+        <div class="dialog-header">
+          <span id="dialog-title">Dateiname</span>
+          <button
+            class="close-button"
+            id="dialog-close-btn"
+            aria-label="Schließen"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="image-container">
+          <img
+            src=""
+            id="dialog-img"
+            alt="Detailansicht des gewählten Fotos"
+            class="image-large"
+          />
+        </div>
+
+        <div class="dialog-controls">
+          <button
+            class="navigation-button"
+            onclick="plusSlides(-1)"
+            aria-label="Vorheriges Bild"
+          >
+            &#8592;
+          </button>
+          <span id="image-counter" class="image-counter">1 / 10</span>
+          <button
+            class="navigation-button"
+            onclick="plusSlides(1)"
+            aria-label="Nächstes Bild"
+          >
+            &#8594;
+          </button>
+        </div>
+      </dialog>
+    </div>
+
+    <footer class="footer">
+      <img
+        src="./img/developerakademielogo.png"
+        alt="Developer Akademie Logo"
+        style="height: 30px"
+      />
+      <p>&copy; 2026 Max Schenk | Developer Akademie GmbH</p>
+    </footer>
+
+    <script src="fotogram-script.js"></script>
+  </body>
+</html>

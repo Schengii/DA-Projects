@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Developer Akademie Front-end 13.12.2024
 
 Aufgabe 11 - WICHTIG: Hinweis zu createElement, appendChild usw. nicht nutzen
@@ -19,4 +20,27 @@ Das ist eine erweiterte Technik und ist vorallem am Anfang nichts was wir empfeh
 
 Von daher bitte verwende dies vorerst nicht!
 Bsp:
+=======
+Developer Akademie Front-end 13.12.2024
+
+Aufgabe 11 - WICHTIG: Hinweis zu createElement, appendChild usw. nicht nutzen
+
+Den folgenden Hinweis geben wir dir nur, damit du weißt was dies ist und nicht verwirrt 
+bist, wenn dies beim googlen auftaucht.
+
+Es soll keineswegs ein Anreiz sein, sich dies jetzt schon anzulesen, wir empfehlen hier
+klar die beigebrachten Techniken zu nutzen um erst einmal zu starten!
+
+
+Hinweis:
+Es gibt auch noch andere/ komplexere Techniken um HTML Elemente zu erzeugen neben .innerHTML.
+Eine sehr bekannt ist einzelne Elemente über eine Funktion wie createElement zu erzeugen und 
+dann hinzuzufügen über appendChild.
+
+Das ist eine erweiterte Technik und ist vorallem am Anfang nichts was wir empfehlen/verwenden.
+
+
+Von daher bitte verwende dies vorerst nicht!
+Bsp:
+>>>>>>> origin/main
 https://www.w3schools.com/jsref/met_document_createelement.asp

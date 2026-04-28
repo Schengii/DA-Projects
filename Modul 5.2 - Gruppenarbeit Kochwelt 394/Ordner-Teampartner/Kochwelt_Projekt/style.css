@@ -1,0 +1,474 @@
+#root {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+
+button {
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+}
+
+span {
+    font-weight: 300;
+}
+
+.margin_left {
+    margin-left: 200px;
+}
+
+.margin_right {
+    margin-right: 200px;
+}
+
+.margin_right_40 {
+    margin-right: 40px;
+}
+
+.margin_Top_40 {
+    margin-top: 40px;
+
+}
+
+.margin_Top_15 {
+    margin-top: 15px;
+
+}
+
+.margin_top_100 {
+    margin-top: 100px;
+}
+
+.margin_Bottom_40 {
+    margin-bottom: 40px;
+}
+
+.margin_Bottom_25 {
+    margin-bottom: 25px;
+}
+
+.margin_top_und_bottom_100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+nav {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px #21201826;
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+}
+
+.logo-size {
+    height: 80px;
+    width: auto;
+}
+
+
+.header_links {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    white-space: nowrap;
+
+}
+
+.header_links:hover {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    white-space: nowrap;
+
+
+}
+
+.header_links_solo {
+    text-decoration: none;
+    color: #403b3b;
+    margin-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid white;
+    border-width: 4px;
+}
+
+.header_links_solo:hover {
+    text-decoration: none;
+    color: #008000;
+    border-bottom: solid #008000;
+    border-width: 4px;
+}
+
+.rezept_des_tages_section {
+    display: flex;
+    flex-direction: row;
+}
+
+.rezept_des_tages_section_bild {
+
+    display: flex;
+}
+
+.vorschaubild {
+    border-radius: 15px;
+    margin-right: 50px;
+}
+
+.rezept_des_tages_section_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rezept_des_tages_section_textPure {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.marginBottom_textH2 {
+    margin-bottom: 20px;
+}
+
+.button_rezept_open {
+    width: 200px;
+    height: 50px;
+    background-color: #008000;
+    color: #fff;
+    font-size: medium;
+    border: none;
+
+}
+
+.button_rezept_open:hover {
+    width: 200px;
+    height: 50px;
+    background-color: #039903;
+    color: #fff;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+
+.rezept_auswahl {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text_align_center {
+    text-align: center;
+}
+
+.rezept_auswahl_rezepte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rezept_auswahl_bilder {
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+
+
+}
+
+.interessant_theme {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.interessant_theme_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.interessant_theme_bild {
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.grau_only {
+    background-color: #403b3b;
+    height: 120px;
+}
+
+.logo_footer {
+    filter: brightness(0) invert(1);
+
+}
+
+/* Rezept_des_Tages */
+
+.font_weight {
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.food_title {
+    display: flex;
+    flex-direction: column;
+}
+
+.food_title_picture {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 9px / 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.icons_recept {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.icons_pTags {
+
+    height: 36px;
+    width: 150;
+    background-color: #efefef;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.food_title_pTags {
+    display: flex;
+    flex-direction: row;
+}
+
+.zutatenFuer_input_head {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+}
+
+.zutatenFuer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.zutatenFuer_table {
+    margin-top: 6px;
+}
+
+hr {
+    height: 1px;
+    background-color: #efefef;
+    border: none;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+input {
+    height: 37px;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.inputClass {
+    border-color: #efefef;
+    border-style: solid;
+    border-radius: 10px 0 0 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.button_class_rezept_des_tages {
+    height: 40px;
+    width: 160px;
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    margin-left: 0;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+tr {
+
+    height: 50px;
+
+}
+
+td {
+    border-radius: 10px;
+}
+
+.rezept_zutate_menge {
+    margin-left: 30px;
+}
+
+tr:nth-child(odd) {
+    background-color: #efefef;
+
+}
+
+.rezept_table_class {
+    width: 100%;
+}
+
+
+
+.zubereitung_anleitung {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 40px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.profileBild {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    margin-right: 30px;
+    margin-top: 5px;
+
+}
+
+.signatur {
+    font-weight: 600;
+}
+
+/* Kontakt Seite */
+
+
+.kontakt_body {
+    height: 100vh;
+    width: auto;
+}
+
+.unten_fixed {
+    position: fixed;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.unten_fixed_box {
+    display: flex;
+    align-items: center;
+}
+
+.class_kontaktiere_uns {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_kontaktiere_uns {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    background-color: #dcdcdc;
+    border-radius: 20px;
+}
+
+.form_kontaktiere_uns_zeilen {
+    width: 89%;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 16px;
+    display: flex;
+    resize: none;
+}
+
+.kontaktiereUnsH2 {
+    padding-top: 15px;
+    margin-left: 16px;
+}
+
+.kontaktiereUnsLabel {
+    padding-top: 20px;
+    margin-left: 16px;
+}
+
+.button_kontakt_form{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.button_kontakt_form_class{
+    width: 100%;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.social_links{
+    display: flex;
+}

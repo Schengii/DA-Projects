@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Kochwelt</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftSide">
+        <img src="./img/logo.png" alt="LOGO" />
+      </div>
+
+      <div class="Navbar">
+        <a href="#">Start</a>
+        <a href="#">Rezept des Tages</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Impressum</a>
+      </div>
+    </header>
+
+    <main>
+      <h1>RezeptIdee</h1>
+
+      <div class="mainPic"></div>
+
+      <div class="basicInfo">
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>15 Min.</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/brain-solid.svg" alt="BRAIN" />
+          <p>simpel</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/calendar-alt-regular.svg" alt="CALENDAR" />
+          <p>15.11.2024</p>
+        </div>
+      </div>
+
+      <div class="seperator"></div>
+    </main>
+
+    <div class="RecipeFunction">
+      <div class="RecipeInputField">
+        <p>Zutaten für</p>
+        <input
+          id="valuePortion"
+          name="valuePortion"
+          type="number"
+          placeholder="Wähle die Menge..."
+          min="1"
+          max="20"
+        />
+        <button onclick="AddPortion()">Portionen</button>
+        <div id="needed"></div>
+      </div>
+
+      <table class="objectsFood">
+        <tbody>
+          <tr class="outlineBg">
+            <td id="recipe1"></td>
+            <td>Apfel</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe2"></td>
+            <td>Banana</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe3"></td>
+            <td>Strawberry</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe4"></td>
+            <td>Blackberry</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe5"></td>
+            <td>Rasperry</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe6"></td>
+            <td>Orange</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="HowTo">
+      <h2>Zubereitung</h2>
+
+      <div class="basicInfo">
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>15 Min.</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>Gesamtzeit ca. 15 Min.</p>
+        </div>
+      </div>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum atque
+        magnam repellat, dolorem nobis saepe, accusamus ea dignissimos ipsam
+        autem quidem! Provident, id nesciunt. Ipsum fugiat quis soluta earum
+        quia!
+      </p>
+    </div>
+
+    <div class="Producer">
+      <h3>Rezept erstellt von</h3>
+
+      <div class="shortInfo">
+        <img src="./img/profile.png" alt="PROFILE" />
+
+        <p>Kenan Cetin</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mainLogo">
+        <img src="./img/logo.png" alt="LOGO" />
+      </div>
+
+      <div class="socials">
+        <img src="" alt="FACEBOOK" />
+        <img src="" alt="INSTAGRAM" />
+        <img src="" alt="TWITTER" />
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="icon" href="./img/favicon.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body onload="rechnePortionen(portions.value)">
+    <nav class="">
+        <div class="logo margin_left">
+            <img class="logo-size" src="./img/logo.png" alt="logo">
+        </div>
+
+
+        <div class="header_links margin_right">
+
+            <a id="start" class="header_links_solo" href="index.html">Start</a>
+            <a id="rezept_des_tages" class="header_links_solo" href="rezept_des_tages.html">Rezept des Tages</a>
+            <a id="kontakt" class="header_links_solo" href="kontakt.html">Kontakt</a>
+            <a id="impressum" class="header_links_solo" href="impressum.html">Impressum</a>
+
+        </div>
+    </nav>
+
+    <div class="food_title margin_left">
+        <div>
+            <h1 class="margin_top_100">Kaiserschmarrn</h1>
+        </div>
+        <div class="img_div_borderRadius margin_right"><img class="food_title_picture" src="./img/kaiserschmarrn.jpg"
+                alt="kaiserschmarrn"></div>
+        <div class="food_title_pTags">
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                    alt="clock">120 Min.
+            </p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/brain-solid.svg"
+                    alt="brain">medium</p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/calendar-alt-regular.svg"
+                    alt="calender">16.11.2024 </p>
+        </div>
+    </div>
+    <hr class="hr_grau">
+    <div class="zutatenFuer margin_left margin_right">
+
+
+        <form class="zutatenFuer_input" id="portionsToCount">
+            <label class=" font_weight" for="portions">Zutaten für</label>
+            <input class="inputClass" type="text" name="portions" id="portions" min="1" max="20" value="4">
+            <button class="button_class_rezept_des_tages" type="button"
+                onclick="rechnePortionen(portions.value)">Portionen</button>
+
+
+            <div class="zutatenFuer_table font_weight">
+                <table class="rezept_table_class" id="rezept_table">
+                    <tr class="rezept_zeile">
+                        <td id="rezept_zutate_name" class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge1">1</span> Eier</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge2">30</span>g Mehl</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge3">30</span>ml Milch</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge4">40</span>g Zucker</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge5">20</span>g Rosinen</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge6">10</span>g Mandeln</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge7">40</span> Butter</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge8">100</span>g Apfelmus</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <div class="zubereitung_anleitung">
+        <h2>Zubereitung</h2>
+
+        <div class="food_title_pTags">
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                    alt="clock">ca. 30 Minuten
+            </p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                alt="clock">Gesamtzeit ca. 40 Minuten
+        </p>
+        </div>
+    </div>
+    
+
+    <p class="zubereitung_anleitung">Teig vorbereiten:<br>
+        Die Eier trennen (Eiweiß und Eigelb getrennt).
+        Das Eigelb mit der Hälfte vom Zucker in einer Schüssel gut verrühren, bis eine cremige Masse entsteht.
+        Mehl und Milch langsam hinzufügen und gut einrühren, sodass ein glatter Teig entsteht.
+        Das Eiweiß in einer separaten Schüssel steif schlagen und vorsichtig unter den Teig heben. So wird der
+        Kaiserschmarrn schön luftig.<br><br>
+        Rosinen und Mandeln vorbereiten:<br>
+        Die Rosinen in etwas Wasser einweichen (optional, um sie weicher zu machen).
+        Die Mandeln grob hacken, wenn sie noch ganz sind.<br><br>
+        Braten:<br>
+        Eine große Pfanne (ideal ist eine, die auch gut in den Ofen passt) mit 80 g Butter erhitzen.
+        Den Teig in die Pfanne geben und die Rosinen sowie Mandeln gleichmäßig darüber verteilen.
+        Bei mittlerer Hitze 3–4 Minuten braten, bis die Unterseite goldbraun ist.<br><br>
+        Wenden und weiter braten:<br>
+        Den Teig mit einem Pfannenwender in große Stücke reißen und die Stücke wenden, damit auch die andere Seite schön
+        goldbraun wird.
+        Die restliche Butter (ca. 80 g) in der Pfanne schmelzen und den Kaiserschmarrn von allen Seiten goldbraun und
+        knusprig braten. Das dauert etwa 5-6 Minuten.<br><br>
+        Servieren:<br>
+        Den Kaiserschmarrn auf Tellern anrichten und mit Puderzucker bestäuben.
+        Das Apfelmus erhitzen und als Beilage servieren.<br><br>
+        Tipp: Du kannst die Rosinen auch weglassen oder nach Belieben durch andere Zutaten wie Nüsse oder Trockenfrüchte
+        ersetzen.<br><br>
+        Guten Appetit!
+    </p>
+
+
+    <br><br><br><br>
+    <h3 class="margin_left signatur">Rezept erstellt von</h3>
+    <div class="profile margin_left">
+        <img class="profileBild" src="./img/profile.png" alt="">
+        <p>Branislav</p>
+    </div>
+
+    <div class="grau_only">
+        <nav class="">
+            <div class="logo margin_left">
+                <img class="logo-size logo_footer" src="./img/logo.png" alt="logo">
+            </div>
+
+
+        </nav>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

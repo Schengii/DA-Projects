@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url("./fonts/Raleway-Italic-VariableFont-ght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Headline */
+header {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    gap: 800px;
+    background-color: white;
+}
+
+header img {
+    height: 56px;
+    object-fit: contain;
+    margin-left: 32px;
+}
+
+.icon-left-side {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    gap: 24px;
+}
+
+.nav-bar, a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #008000;
+    cursor: pointer;
+}
+
+
+
+/* Main Sektor  */
+.sektor-1 {
+    display: flex;
+    margin: 120px 320px 0 240px;
+    flex-direction: column;
+    width: auto;
+
+}
+
+h1 {
+    display: flex;
+    font-size: 32px;
+    margin: 32px 0 16px 0;
+}
+
+.image-schnitzel {
+    background-image: url(./img/schniposa.webp);
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.info img {
+    width: 16px;
+    object-fit: cover;
+}
+
+.getInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 8px;
+    margin: 32px 16px 0 16px;
+}
+
+.seperator {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+}
+
+
+/* Rezept Eingabefeld */
+.recipeFunction {
+    margin: 0 32px 0 32px;
+}
+
+.inputField {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px 0 16px 0;
+}
+
+.inputField input {
+    border-width: 1px;
+    margin-left: 16px;
+    width: 160px;
+    padding-inline: 4px;
+    padding-block: 8px;
+    font-size: 14px;
+    border-color: rgb(240, 240, 240);
+    border-radius: 8px 0 0 8px;
+}
+
+.inputField button {
+    padding-block: 8px;
+    padding-inline: 0px;
+    border-width: 0px;
+    width: 160px;
+    background-color: #009900;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Rezept Liste */
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+/* Sektor 3 Zubereitung */
+.sektor-3 {
+    margin: 32px;
+}
+
+.beschreibung {
+    border: 1px solid black;
+}
+
+
+/* Sektor 4 */
+.sektor-4 {
+    margin: 16px 32px 64px 32px;
+}
+
+h3 {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #202020;
+    padding: 64px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo img{
+    height: 56px;
+    margin-left: 32px;
+    filter: brightness(0) invert(1)
+}

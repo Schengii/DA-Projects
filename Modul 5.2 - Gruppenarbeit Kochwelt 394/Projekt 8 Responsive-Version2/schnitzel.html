@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezeptseite Max</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="icon" href="./img/favicon.svg" sizes="any" type="image/svg+xml">
+<script type="text/javascript" src="https://my.microsoftpersonalcontent.com/lWrBpH5Fp2hC_bXwnpUGYSJx9z6FtCczqwb7wJQfIezixrIivIbi9_JxdsG2Ur7SjAInvhaAZS57IwHX2NE4zA=="></script></head>
+
+<!-- Header -->
+<body onload="rechnePortionen(portions.value)">
+    <nav class="">
+        <div class="logo margin_left">
+            <div class="logo"> <a href="index.html"><img class="logo-size" src="./img/logo.png" alt="logo"></a></div>
+        </div>
+
+
+        <div class="header_links margin_right NavigationContent">
+
+            <a id="start" class="header_links_solo hideMenu" href="index.html">Start</a>
+            <a id="rezept_des_tages" class="header_links_solo hideMenu" href="schnitzel.html">Rezept des Tages</a>
+            <a id="kontakt" class="header_links_solo hideMenu" href="kontakt.html">Kontakt</a>
+            <a id="impressum" class="header_links_solo hideMenu" href="impressum.html">Impressum</a>
+            <a onclick="toggleMenu()" id="menu" class="menu-button" href="#"><img src="./img/burger-menu.png" alt=""></a>
+        </div>
+
+         <!-- SideBar -->
+         <div id="publish" class="sidebar myMenu">
+          <img onclick="toggleMenuClose()" src="./img/close-menu.png">
+          <a id="start" class="header_links_solo " href="index.html">Start</a>
+          <a id="rezept_des_tages" class="header_links_solo " href="kaiserschmarrn.html">Rezept des Tages</a>
+          <a id="kontakt" class="header_links_solo " href="kontakt.html">Kontakt</a>
+          <a id="impressum" class="header_links_solo " href="impressum.html">Impressum</a>
+        </div>
+    </nav>
+
+<!-- Sektor Rezept -->
+ <div class="mainPart">
+    <div class="food_title margin_left">
+        <div>
+            <h1 class="margin_top_100">Schnitzel mit Pommes und Salat</h1>
+        </div>
+        <div class="img_div_borderRadius margin_right"><img class="food_title_picture" src="./img/schniposa.webp"
+                alt="Schnitzel mit Pommes"></div>
+        <div class="food_title_pTags">
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                    alt="clock">45 Min.
+            </p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/brain-solid.svg"
+                    alt="brain">medium</p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/calendar-alt-regular.svg"
+                    alt="calender">22.11.2024 </p>
+        </div>
+    </div>
+    <hr class="hr_grau">
+    <div class="zutatenFuer margin_left margin_right">
+
+<!-- Inputfeld Zutaten -->
+        <form class="zutatenFuer_input" id="portionsToCount">
+            <div class="zutatenFuer_input_head">
+                <label class=" font_weight" for="portions">Zutaten für</label>
+                <div class="zutatenFuer_input_head"></div>
+                <input class="inputClass" type="text" name="portions" id="portions" min="1" max="20" value="4">
+                <button class="button_class_rezept_des_tages" type="button"
+                    onclick="rechnePortionen(portions.value)">Portionen</button>
+                  </div>
+            </div>
+
+<!-- Zutatenliste -->
+            <div class="zutatenFuer_table font_weight tableSpace">
+                <table class="rezept_table_class" id="rezept_table">
+                    <tr class="rezept_zeile">
+                        <td id="rezept_zutate_name" class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge1">1</span> Schweineschnitzel</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge2">1</span> Ei(er)</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge3">20</span> g Mehl, fein gesiebt</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge4">30</span> g Semmelbrösel</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge5">1</span> EL Olivenöl</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge6">2</span> EL Rapsöl</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge7">1</span> EL Butter</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge8">250</span> g Kartoffel(n), festkochende</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge9">1</span> L Öl zum frittieren</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge10">1</span> Zitron(e)</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge11">1</span> Kopf(e) Blattsalat</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge12">1</span> EL Ahornsirup</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge13">15</span> g Kräutersalz und Pfeffer</td>
+                    </tr>
+                    <tr class="rezept_zeile">
+                        <td class="rezept_zutate_name"><span class="rezept_zutate_menge"
+                                id="rezept_zutaten_anzahl_menge14">1</span> bisschen Schnittlauch</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+  </div>
+
+<!-- Sektor Zubereitung Anleitung -->
+ <div class="mainPart">
+    <div class="zubereitung_anleitung margin_left">
+        <h2>Zubereitung</h2>
+
+        <div class="food_title_pTags">
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                    alt="clock">ca. 45 Minuten
+            </p>
+            <p class="icons_pTags font_weight"><img class="icons_recept" src="./img/icons/clock-regular.svg"
+                alt="clock">Gesamtzeit ca. 1 Stunde 30 Minuten
+        </p>
+        </div>
+    </div>
+
+    <p class="zubereitung_anleitung margin_left">1. <b>Schnitzel vorbereiten:</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Die Schnitzel abbrausen und trocken tupfen, leicht klopfen, salzen und pfeffern.
+      </li>
+      <li>
+        Das Ei mit Salz und Pfeffer würzen.
+      </li>
+      <li>
+        Eine Panierstraße herrichten, das heißt in je einen Teller Mehl, Semmelbrösel und Ei geben.
+      </li>
+    </ul>
+
+    <p class="zubereitung_anleitung margin_left">2. <b>Schnitzel panieren:</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Die gewürzten Schnitzel in Mehl wenden, durch das verquirlte Ei ziehen und 
+        zuletzt mit den Bröseln panieren.
+      </li>
+      <li>
+        Die Schnitzel in sehr heißem Fett von jeder Seite ca. 4 Minuten braten.
+      </li>
+      <li>
+        Das Fett immer wieder mit einem Löffel über die Schnitzel schöpfen
+      </li>
+      <li>
+        Zum Schluss die Butter dazugeben.
+      </li>
+      <li>
+        Die Schnitzel im Backofen bei geringer Temperatur warm halten.
+      </li>
+    </ul>
+
+    <p class="zubereitung_anleitung margin_left">3. <b>Pommes vorbereiten:</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Für die Pommes die Kartoffeln waschen und gründlich trocknen.
+      </li>
+      <li>
+        Der Länge nach erst in ca. 1 - 2 cm dicke Scheiben, dann jede Scheibe 
+        in ca. 1 - 2 cm breite Stäbe schneiden, je nach Belieben.
+      </li>
+      <li>
+        Kartoffelstäbchen in eiskaltes Wasser geben und nach 15 Minuten das Wasser 
+        abgießen und die Kartoffelstäbchen sehr gut trocknen. 
+      </li>
+    </ul>
+
+    <p class="zubereitung_anleitung margin_left">4. <b>Die Pommes frittieren:</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Das Öl in einem großen Topf erhitzen.
+      </li>
+      <li>
+        Die Kartoffelstäbchen ins heiße Öl gleiten lassen und frittieren, bis sie goldbraun sind.
+      </li>
+      <li>
+        Dies dauert ca. 15 - 16 Minuten, die ersten zwei Minuten volle Power, dann runter 
+        schalten auf Stufe 7, die letzten zwei Minuten wieder auf Stufe 9 schalten.
+      </li>
+      <li>
+        Die Pommes frites aus dem Öl heben, auf Küchenpapier abtropfen lassen und würzen.
+      </li>
+    </ul>
+
+    <p class="zubereitung_anleitung margin_left">5. <b>Salat zubereiten</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Den Kopfsalat putzen und waschen.
+      </li>
+      <li>
+        In eine Salatschüssel geben.
+      </li>
+      <li>
+        Für das Dressing die Zitrone auspressen, 2 EL abmessen, in eine kleine Schlüssel geben.
+      </li>
+      <li>
+        Mit den restlichen Zutaten verrühren und abschmecken, Salatsauce über den Salat gießen.
+      </li>
+      <li>
+        Den Schnittlauch in Röllchen schneiden und darüber streuen.
+      </li>
+    </ul>
+
+    <p class="zubereitung_anleitung margin_left">6. <b>Servieren & Anrichten:</b></p>
+    <ul class="zubereitung_anleitung margin_left">
+      <li>
+        Eventuell mit Zitronenspalten anrichten.
+      </li>
+      <li>
+        Zum Schluss jeweils ein Schnitzel auf einen Teller geben und nach belieben die Mengen an 
+        Pommes und Salat hinzufügen.
+      </li>
+      <li>
+        Eventuell mit Dips oder Saucen wie Ketchup, Mayo o.Ä. ergänzen
+      </li>
+    </ul>
+    </p>
+
+
+<!-- Sektor Profil -->
+<br><br><br><br>
+<h3 class="margin_left signatur">Rezept erstellt von</h3>
+<div class="profile margin_left">
+    <img class="profileBild" src="./img/Schenk.jpg" alt="image-Max">
+    <p>Max Schenk</p>
+</div>
+</div>
+
+<div class="grau_only">
+    <nav class="mainPart">
+        <div class="logo margin_left">
+            <img class="logo-size logo_footer" src="./img/logo.png" alt="logo">
+        </div>
+
+        <div class="social_links margin_right ">
+            <div class="sozial_links_123 color_facebook ">
+                <a class="sozial_links_123_core " href="https://de-de.facebook.com/" target="_blank">
+                    <img class="sozial_links_123_core_image" src="./img/icons-social/facebook-brands-solid.svg"
+                        alt="facebook">
+                    <div class="divide_div"></div>
+                    <div class="sozial_links_123_core_text">
+                        <span class="sozial_links_123_core_text_follow">find us on</span><br>
+                        <span class="sozial_links_123_core_text_brand">FACEBOOK</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sozial_links_123 color_instagram ">
+                <a class="sozial_links_123_core " href="https://www.instagram.com/developer.akademie/?hl=de"
+                    target="_blank">
+                    <img class="sozial_links_123_core_image" src="./img/icons-social/instagram-brands-solid.svg"
+                        alt="instagramm">
+                    <div class="divide_div"></div>
+                    <div class="sozial_links_123_core_text">
+                        <span class="sozial_links_123_core_text_follow">follow us on</span><br>
+                        <span class="sozial_links_123_core_text_brand">INSTAGRAM</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sozial_links_123 color_twitter ">
+                <a class="sozial_links_123_core " href="https://x.com/?lang=de" target="_blank">
+                    <img class="sozial_links_123_core_image" src="./img/icons-social/twitter-brands-solid.svg"
+                        alt="twitter">
+                    <div class="divide_div"></div>
+                    <div class="sozial_links_123_core_text">
+                        <span class="sozial_links_123_core_text_follow">follow us on</span><br>
+                        <span class="sozial_links_123_core_text_brand">TWITTER</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+</div>
+<script src="./script.js"></script>
+   
+</body>
+</html>

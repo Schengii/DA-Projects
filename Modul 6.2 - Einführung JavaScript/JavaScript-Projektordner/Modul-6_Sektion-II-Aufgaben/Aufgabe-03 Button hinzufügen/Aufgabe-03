@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*****
 Developer-Akademie Front-end 13.12.2024
 *****/
@@ -14,3 +15,21 @@ Tipp: im besten Fall bekommt der Button hier schon eine id.
 Aufgabe 2:
 Füge diesem Button wieder mit Hilfe von JavaScript den Text hinzu "klick mich"
 
+=======
+/*****
+Developer-Akademie Front-end 13.12.2024
+*****/
+
+
+03 - Aufgaben: Button hinzufügen
+
+Aufgabe 1:
+Erstelle mit Hilfe von JavaScript einen Button innerhalb einer div.
+
+Tipp: im besten Fall bekommt der Button hier schon eine id.
+
+
+Aufgabe 2:
+Füge diesem Button wieder mit Hilfe von JavaScript den Text hinzu "klick mich"
+
+>>>>>>> origin/main

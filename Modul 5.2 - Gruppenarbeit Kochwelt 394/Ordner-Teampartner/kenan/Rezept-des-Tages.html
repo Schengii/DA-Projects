@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Kochwelt</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftSide">
+        <img src="./img/logo.png" alt="LOGO" />
+      </div>
+
+      <div class="Navbar">
+        <li class="navbarList"><a href="#">Start</a></li>
+        <li class="navbarList onPage"><a href="#">Rezept des Tages</a></li>
+        <li class="navbarList"><a href="#">Kontakt</a></li>
+        <li class="navbarList"><a href="#">Impressum</a></li>
+        
+      </div>
+    </header>
+
+    <main>
+      <h1>Spaghetti mit Tomaten-Parmesansoße</h1>
+
+      <div class="mainPic"></div>
+
+      <div class="basicInfo">
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>15 Min.</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/brain-solid.svg" alt="BRAIN" />
+          <p>simpel</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/calendar-alt-regular.svg" alt="CALENDAR" />
+          <p>15.11.2024</p>
+        </div>
+      </div>
+
+      <div class="seperator"></div>
+    </main>
+
+    <div class="RecipeFunction">
+      <div class="RecipeInputField">
+        <p>Zutaten für</p>
+        <input
+          id="valuePortion"
+          name="valuePortion"
+          type="number"
+          placeholder="Wähle die Menge..."
+          min="1"
+          max="20"
+        />
+        <button onclick="AddPortion()">Portionen</button>
+      </div>
+
+      <div id="needed"></div>
+
+      <table class="objectsFood">
+        <tbody>
+          <tr class="outlineBg">
+            <td id="recipe1"></td>
+            <td>Spaghetti oder andere Pasta</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe2"></td>
+            <td>Tomaten, gehackt</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe3"></td>
+            <td>Parmesan</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe4"></td>
+            <td>Sahne</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe5"></td>
+            <td>kleine Zwiebel</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe6"></td>
+            <td>Knoblauchzehen</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe7"></td>
+            <td>Olivenöl</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe8"></td>
+            <td>Butter</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe9"></td>
+            <td>Zucker</td>
+          </tr>
+
+          <tr class="outlineBg2">
+            <td id="recipe10"></td>
+            <td>Basilikum</td>
+          </tr>
+
+          <tr class="outlineBg">
+            <td id="recipe11"></td>
+            <td>Salz und Pfeffer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="HowTo">
+      <h2>Zubereitung</h2>
+
+      <div class="basicInfo">
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>15 Min.</p>
+        </div>
+
+        <div class="getInfo">
+          <img src="./img/icons/clock-regular.svg" alt="CLOCK" />
+          <p>Gesamtzeit ca. 15 Min.</p>
+        </div>
+      </div>
+
+      <div class="startToCook">
+        <p>1. <b>Spaghetti kochen:</b></p>
+        <ul>
+          <li>
+            Setze einen großen Topf mit Wasser auf und bringe es zum Kochen.
+            Sobald das Wasser kocht, salze es großzügig und gib die Spaghetti
+            hinein.
+          </li>
+          <li>
+            Koche die Spaghetti gemäß der Packungsanweisung al dente (meistens
+            ca. 8-10 Minuten).
+          </li>
+          <li>
+            Gieße die Spaghetti ab und stelle sie beiseite, dabei etwas
+            Kochwasser aufbewahren.
+          </li>
+        </ul>
+
+        <p>2. <b>Tomaten-Parmesansoße zubereiten:</b></p>
+        <ul>
+          <li>
+            Während die Spaghetti kochen, erhitze das Olivenöl in einer großen
+            Pfanne bei mittlerer Hitze.
+          </li>
+          <li>
+            Schneide die Zwiebel in kleine Würfel und brate sie im Olivenöl für
+            ca. 3-4 Minuten an, bis sie weich und leicht goldbraun sind.
+          </li>
+          <li>
+            Hacke den Knoblauch fein und gib ihn zu den Zwiebeln. Brate ihn für
+            etwa 1-2 Minuten mit, bis er duftet.
+          </li>
+          <li>
+            Gib die Tomaten aus der Dose hinzu (wenn du ganze Tomaten
+            verwendest, zerdrücke sie einfach mit einem Löffel oder einer Gabel
+            in der Pfanne).
+          </li>
+          <li>
+            Lasse die Tomatenmischung bei mittlerer Hitze für 10-15 Minuten
+            köcheln, bis die Sauce etwas eingedickt ist. Wenn du möchtest,
+            kannst du eine Prise Zucker hinzufügen, um die Säure der Tomaten zu
+            balancieren.
+          </li>
+          <li>
+            Würze die Sauce mit Salz, Pfeffer und getrocknetem Oregano oder
+            frischem Basilikum.
+          </li>
+        </ul>
+
+        <p>3. <b>Parmesan hinzufügen:</b></p>
+        <ul>
+          <li>
+            Sobald die Sauce fertig ist, nehme sie vom Herd und rühre den frisch
+            geriebenen Parmesan unter. Der Parmesan wird die Sauce schön cremig
+            machen.
+          </li>
+        </ul>
+
+        <p>4. <b>Spaghetti und Sauce vereinen:</b></p>
+        <ul>
+          <li>
+            Gib die abgetropften Spaghetti in die Pfanne mit der
+            Tomaten-Parmesansoße und vermische alles gut, sodass die Nudeln
+            gleichmäßig mit der Sauce bedeckt sind. Falls die Sauce zu dick ist,
+            kannst du etwas von dem aufgehobenen Nudelwasser hinzufügen, um sie
+            zu verdünnen.
+          </li>
+        </ul>
+
+        <p>5. <b>Servieren:</b></p>
+        <ul>
+          <li>
+            Richte die Spaghetti auf Tellern an und streue bei Bedarf noch mehr
+            Parmesan darüber. Du kannst auch noch etwas frisches Basilikum
+            darüber geben, wenn du magst.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="Producer">
+      <h3>Rezept erstellt von</h3>
+
+      <div class="shortInfo">
+        <img src="./img/pb.jpg" alt="PROFILE" />
+
+        <p>Kenan Cetin</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mainLogo">
+        <a href="#"><img src="./img/logo.png" alt="LOGO" /></a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/developer.akademie/" target="_blank"><img src="./img/fb.png" alt="FACEBOOK" /></a>
+        <a href="https://www.instagram.com/developer.akademie/?hl=de" target="_blank"><img src="./img/ig.png" alt="INSTAGRAM" /></a>
+        <a href="https://developerakademie.com/" target="_blank"><img src="./img/twit.png" alt="TWITTER" /></a>
+      </div>
+    </footer>
+  </body>
+</html>
