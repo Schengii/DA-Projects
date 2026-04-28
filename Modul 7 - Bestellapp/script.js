@@ -1,3 +1,4 @@
+/*
 let myDishes = [
     { name: "Pizza Margherita", description: "Tomatensoße, Mozzarella und Basilikum", price: 11.90 },
     { name: "Pizza Salami", description: "Tomatensoße, Mozzarella und würzige Salami", price: 13.90 },
@@ -5,6 +6,41 @@ let myDishes = [
     { name: "Veggie Burger", description: "Gemüsepatty, Salat, Tomate und vegane Mayo", price: 14.90 },
     { name: "Gemischter Salat", description: "Grüner Salat, Tomaten, Gurken, Hausdressing", price: 7.90 }
 ];
+*/
+
+let myDishes = [
+    { 
+        name: "Pizza Margherita", 
+        description: "Tomatensoße, Mozzarella und frischer Basilikum", 
+        price: 11.90,
+        image: "https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?q=80&w=400" 
+    },
+    { 
+        name: "Classic Cheeseburger", 
+        description: "100% Rindfleisch, Cheddar, Salat und Haussauce", 
+        price: 14.50,
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400" 
+    },
+    { 
+        name: "Pizza Salami", 
+        description: "Mit würziger Rindersalami und extra Käse", 
+        price: 13.90,
+        image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=400" 
+    },
+    { 
+        name: "Crispy Chicken Burger", 
+        description: "Paniertes Hähnchenfilet mit Mayo und Gurken", 
+        price: 13.90,
+        image: "https://images.unsplash.com/photo-1610614819513-58e34989848b?q=80&w=400" 
+    },
+    { 
+        name: "Insalata Mista", 
+        description: "Gemischter Saisonsalat mit Balsamico-Dressing", 
+        price: 8.50,
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400" 
+    }
+];
+
 
 let basket = [];
 let deliveryCost = 2.99;
@@ -19,21 +55,26 @@ function render() {
     renderBasket();
 }
 
+
 function getDishTemplate(index) {
     let dish = myDishes[index];
     let formattedPrice = dish.price.toFixed(2).replace('.', ',');
     
     return `
         <div class="dish-card" onclick="addToBasket(${index})">
-            <div>
+            <div class="dish-info">
                 <h3>${dish.name}</h3>
-                <p>${dish.description}</p>
-                <p><b>${formattedPrice} €</b></p>
+                <p class="dish-description">${dish.description}</p>
+                <p class="dish-price"><b>${formattedPrice} €</b></p>
             </div>
-            <button class="add-btn">+</button>
+            <div class="dish-image-container">
+                <img src="${dish.image}" alt="${dish.name}" class="dish-thumb">
+                <button class="add-btn">+</button>
+            </div>
         </div>
     `;
 }
+
 
 function addToBasket(index) {
     let dish = myDishes[index];

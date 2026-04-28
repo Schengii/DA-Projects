@@ -1,10 +1,12 @@
 /* --- 1. Grund-Einstellungen --- */
 :root {
-    --primary-color: #ff8000; /* Typisches Lieferdienst-Orange */
-    --bg-color: #f8f9fa;
-    --text-main: #333;
-    --border-color: #e0e0e0;
+    --primary-color: #ff8000;    /* Das HotDrop Orange */
+    --primary-hover: #e67300;   /* Dunkleres Orange für Hover-Effekte */
+    --bg-light: #f3f4f6;        /* Hellgrauer Hintergrund für die Seite */
+    --text-dark: #1d1d1b;       /* Fast Schwarz für Überschriften */
+    --text-gray: #6b7280;       /* Mittelgrau für Beschreibungen */
     --white: #ffffff;
+    --success-green: #22c55e;   /* Für die Erfolgsmeldung beim Bestellen */
 }
 
 * {
@@ -138,19 +140,52 @@ main {
 
 /* Beispiel für eine Gericht-Karte (wird später per JS erstellt) */
 .dish-card {
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
-    transition: 0.2s;
+    align-items: center;
+    background: var(--white);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: all 0.2s ease-in-out;
 }
 
 .dish-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border-color: var(--primary-color);
+}
+
+.dish-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dish-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.add-btn {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-btn:hover {
+    background: var(--primary-hover);
 }
 
 /* --- 6. Warenkorb (Desktop Sticky) --- */
@@ -205,6 +240,8 @@ main {
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
+
+
 
 /* Media Query für Mobile (Vorgabe < 320px bis Tablet) */
 @media (max-width: 900px) {
