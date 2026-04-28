@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HotDrop - Dein Lieferdienst</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+
+<body onload="render()">
+
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="HotDrop Logo" class="logo">
+            <nav>
+                <input type="text" placeholder="PLZ eingeben..." class="search-input">
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <section class="hero-section">
+                <img src="img/hero-pizza.jpg" alt="Leckeres Essen" class="hero-image">
+                <div class="restaurant-logo-container">
+                    <img src="img/restaurant-logo.png" alt="Restaurant Logo" class="restaurant-logo">
+                </div>
+            </section>
+
+            <section class="restaurant-info">
+                <h1>HotDrop Pizza & Burger</h1>
+                <div class="rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="rating-text">(4.8 von 5)</span>
+                </div>
+                <p class="delivery-info">
+                    <span>Minimum 15,00 €</span> • 
+                    <span>Lieferung 2,99 €</span> • 
+                    <span>30-45 Min.</span>
+                </p>
+            </section>
+
+            <nav class="category-slider">
+                <ul>
+                    <li><a href="#pizza">Pizza</a></li>
+                    <li><a href="#burger">Burger</a></li>
+                    <li><a href="#salate">Salate</a></li>
+                    <li><a href="#getraenke">Getränke</a></li>
+                </ul>
+            </nav>
+
+            <div id="menu-container">
+                </div>
+        </main>
+
+        <aside id="basket-container" class="basket-card">
+            <h2>Dein Warenkorb</h2>
+            <div id="basket-items" class="basket-items-list">
+                <div class="empty-basket-message">
+                    Wähle leckere Gerichte aus der Karte aus.
+                </div>
+            </div>
+
+            <div id="basket-calculation" class="basket-calculation d-none">
+                <hr>
+                <div class="calc-row">
+                    <span>Zwischensumme</span>
+                    <span id="subtotal">0.00 €</span>
+                </div>
+                <div class="calc-row">
+                    <span>Lieferkosten</span>
+                    <span id="delivery-costs">2.99 €</span>
+                </div>
+                <div class="calc-row total-row">
+                    <span>Gesamt</span>
+                    <span id="total-price">0.00 €</span>
+                </div>
+                <button onclick="placeOrder()" class="order-button">Bestellen</button>
+            </div>
+        </aside>
+    </div>
+
+    <div class="mobile-basket-button-container">
+        <button id="mobile-basket-btn" onclick="openMobileBasket()">
+            Warenkorb (<span id="mobile-total">0.00 €</span>)
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HotDrop Delivery - Developer Akademie Projekt</p>
+    </footer>
+
+</body>
+</html>
