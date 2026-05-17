@@ -39,10 +39,11 @@ header {
 .header-content {
     width: 100%;
     max-width: 1440px;
+    height: 128px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
+    gap: 500px;
     color: white;
 }
 
@@ -77,13 +78,13 @@ main {
     width: 100%;
     height: 300px;
     border-radius: 12px;
-    overflow: visible; /* Wichtig für das überlappende Logo */
+    overflow: visible;
     margin-bottom: 60px;
 }
 
 .hero-image {
-    width: 100%;
-    height: 100%;
+    width: 1440px;
+    height: 508px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -100,9 +101,9 @@ main {
 }
 
 .restaurant-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 .restaurant-info {
@@ -141,7 +142,7 @@ main {
     font-weight: 500;
 }
 
-/* Beispiel für eine Gericht-Karte (wird später per JS erstellt) */
+
 .dish-card {
     display: flex;
     justify-content: space-between;
